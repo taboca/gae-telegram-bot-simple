@@ -7,3 +7,8 @@ With MAC OSX, vi ~/.pydistutils.cfg with the following contents uncommented.  Th
 #prefix=
 ```
 
+## Install local lib 
+
+```
+pip install -t lib/ python-telegram-bot
+```
