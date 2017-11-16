@@ -30,3 +30,7 @@ With MAC OSX, vi ~/.pydistutils.cfg with the following contents uncommented.  Th
 #[install]
 #prefix=
 ```
+
+## References
+
+* [setWebhook method](https://core.telegram.org/bots/api#setwebhook)
