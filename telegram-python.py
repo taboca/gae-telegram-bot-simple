@@ -30,7 +30,7 @@ class set_webhook(webapp2.RequestHandler):
 
     strResult = 'Configuration failed..'
 
-    ok = bot.setWebhook('https://bot-telegram-gae-test.appspot.com/telegram_post_hook')
+    ok = bot.setWebhook(config.URL_WEB_HOOK)
     if ok:
         strResult = "Configuration for webhook 'telegram_post_hook' ok"
 

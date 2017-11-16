@@ -41,9 +41,9 @@ import config
 bot = telegram.Bot(config.token)
 ```
 
-Your config file will need to have the token from Telegram's Bot Father which is their human interface for initial bot setup — you can get the token from [Bot Father](https://telegram.me/BotFather). 
+Your config file will need to have the token from Telegram's Bot Father which is their human interface for initial bot setup — you can get the token from [Bot Father](https://telegram.me/BotFather).
 
-and enable an end-point handler in your webapp, so you can call it from your own browser and establish the initial config for web hook method to work:
+Enable an end-point handler in your webapp, so you can call it from your own browser and establish the initial config for web hook method to work:
 
 ```
 app = webapp2.WSGIApplication([
