@@ -9,7 +9,7 @@ import json
 global bot
 
 import config
-bot = telegram.Bot(config.token)
+bot = telegram.Bot(config.TELEGRAM_API_TOKEN)
 
 class webhook_handler(webapp2.RequestHandler):
   def post(self):
