@@ -59,12 +59,14 @@ class set_webhook(webapp2.RequestHandler):
 
     strResult = 'Configuration failed..'
 
-    ok = bot.setWebhook('https://MYAPPDOMAIN/telegram_post_hook')
+    ok = bot.setWebhook('https://MY_GOOGLE_APPENGINE_URL/telegram_post_hook')
     if ok:
         strResult = "Configuration for webhook 'telegram_post_hook' ok"
 
     self.response.out.write(strResult)
 ```
+
+MY_GOOGLE_APPENGINE_URL will be the public URL for this project. Notice that '/telegram_post_hook' is intended for Telegram API usage while '/config_setWebhook' is used by you.
 
 Now, you should add the referred (telegram_post_hook) end-point so Telegram's remote server can call you for all incoming messages:
 
