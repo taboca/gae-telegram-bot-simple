@@ -22,14 +22,18 @@ vendor.add('lib')
 pip install -t lib/ python-telegram-bot
 ```
 
-## Mac OSX pip -t troubleshooting
+## Mac OSX troubleshooting for pip local lib install (pip -t)
 
-With MAC OSX, vi ~/.pydistutils.cfg with the following contents uncommented.  This is based in https://stackoverflow.com/questions/24257803/distutilsoptionerror-must-supply-either-home-or-prefix-exec-prefix-not-both which is solution based on this
+With MAC OS X you may stumble in a problem when installing local pip libraries. If so, check this [thread about a known issue with pip and a work around](https://stackoverflow.com/questions/24257803/distutilsoptionerror-must-supply-either-home-or-prefix-exec-prefix-not-both). This was my case so I had to "vi ~/.pydistutils.cfg" with the following config values: 
 
 ```
 #[install]
 #prefix=
 ```
+
+## Code
+
+
 
 ## References
 
