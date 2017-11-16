@@ -66,6 +66,35 @@ class set_webhook(webapp2.RequestHandler):
     self.response.out.write(strResult)
 ```
 
+Now, you should add the referred (telegram_post_hook) end-point so Telegram's remote server can call you for all incoming messages:
+
+```
+app = webapp2.WSGIApplication([
+    ('/config_setWebhook' , set_webhook ),
+    ('/telegram_post_hook', webhook_handler) # Actually should be called from Telegram
+], debug=True)
+```
+
+The implementation of it, in our limited sample, will just send back the same text:
+
+```
+
+class webhook_handler(webapp2.RequestHandler):
+  def post(self):
+
+    if self.request.method == "POST":
+
+        body = json.loads(self.request.body)
+
+        update  = telegram.Update.de_json(body, bot)
+        chat_id = update.message.chat.id
+        text    = update.message.text.encode('utf-8')
+        bot.sendMessage(chat_id=chat_id, text=text)
+
+    self.response.out.write('ok')
+```
+
+
 ## References
 
 * [setWebhook method](https://core.telegram.org/bots/api#setwebhook)
