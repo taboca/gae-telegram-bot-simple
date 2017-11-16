@@ -34,7 +34,16 @@ With MAC OS X you may stumble in a problem when installing local pip libraries. 
 
 ## Code
 
-Make the necessary authentication with Telegram API and enable an end-point handler in your webapp, so you can call it from your own browser and establish the initial config for web hook method to work:
+See whole sample [here](https://github.com/taboca/gae-telegram-bot-simple/blob/master/telegram-python.py). First, we need to start via making the necessary authentication with Telegram API:
+
+```
+import config
+bot = telegram.Bot(config.token)
+```
+
+Your config file will need to have the token from Telegram's Bot Father which is their human interface for initial bot setup — you can get the token from [Bot Father](https://telegram.me/BotFather). 
+
+and enable an end-point handler in your webapp, so you can call it from your own browser and establish the initial config for web hook method to work:
 
 ```
 app = webapp2.WSGIApplication([
