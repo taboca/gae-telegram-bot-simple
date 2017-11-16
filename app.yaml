@@ -1,4 +1,4 @@
-application: my-bot-telegram-gae-test
+application: bot-telegram-gae-test
 version: 2
 runtime: python27
 api_version: 1
