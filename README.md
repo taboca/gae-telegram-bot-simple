@@ -34,14 +34,15 @@ With MAC OS X you may stumble in a problem when installing local pip libraries. 
 
 ## Code
 
-Enable an end-point handler in your webapp.
+Make the necessary authentication with Telegram API and enable an end-point handler in your webapp, so you can call it from your own browser and establish the initial config for web hook method to work:
+
 ```
 app = webapp2.WSGIApplication([
     ('/config_setWebhook' , set_webhook ),
 ], debug=True)
 ```
 
-The end-point implementation establishes a connection with the bot handler on Telegram's end using "bot.setWebhook" API. Notices that you will need to pass your public end-point web hook address: 
+The end-point implementation establishes a connection with the bot handler on Telegram's end using "bot.setWebhook" API. Notices that you will need to pass your public end-point web hook address:
 
 ```
 class set_webhook(webapp2.RequestHandler):
