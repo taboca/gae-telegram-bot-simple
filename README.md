@@ -1,8 +1,8 @@
 # GAE Technote - Telegram Bot and GAE
 
-This technote shows a basic Telegram Bot implementation - the echo test. This sample uses the approach referred from Telegram API as *webhooks*. In the *webhooks* setup, first, your code will need to establish a config step with the API, to setup the web hook: The public end-point that is available on your end so Telegram bot can send an HTTP POST message to you for any new incoming messages from an user chat session.
+This technote shows a basic Telegram Bot implementation - yet another echo test bot app. The included sample uses the approach referred from Telegram API as *webhooks*.
 
-With that initial setup, you are good to go, and any new messages from the chat should call your hook end point of choice.
+With this approach, first, your code will need to establish a configuration step with the Telegram API in order to setup the web hook. Once the referred web hook is setup, your remote Telegram Bot handler, on the Telegram server end, will always send an HTTP POST message on your end, therefore enabling you to receive all incoming messages from an user chat session.
 
 ## Local install to the lib - optimizing for GAE
 
